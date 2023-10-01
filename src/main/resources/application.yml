@@ -1,0 +1,49 @@
+spring:
+  datasource:
+    username: root
+    url: jdbc:mysql://localhost:3306/study?serverTimezone=UTC
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 40
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+      show_sql: true
+      use_sql_comments: true
+  classes:
+    additional-classpath: target/dependency
+  redis:
+    host: localhost
+    port: 6379
+
+redis:
+  stock:
+    prefix: stocks
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include:
+          - health
+          - info
+          - metrics
+  influx:
+    metrics:
+      export:
+        db: mydb
+        enabled: true
+        uri: http://localhost:8086
+        auto-create-db: true
+
+server:
+  tomcat:
+    mbeanregistry:
+      enabled: true
+
+logging:
+  level:
+    root: debug
