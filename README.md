@@ -98,3 +98,6 @@ checks.........................: 100.00% ✓ 111269    ✗ 0
      vus............................: 1       min=1       max=125
      vus_max........................: 125     min=125     max=125
 ```
+
+<img width="1606" alt="스크린샷 2023-09-11 오후 7 25 08" src="https://github.com/hajihong/ShoppingMall-Project/assets/74098327/d978d67d-dabd-4a76-ab69-99c8b49db246">
+
